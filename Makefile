@@ -12,7 +12,7 @@ time-bench: $(COMPILED)
 memory-bench: $(COMPILED)
 	rm -f memory-bytes memory-record-dc
 	touch memory-bytes memory-record-dc
-	hyperfine 'racket bench.rkt --memory --bytes -n 1 >> memory-bytes' 'racket bench.rkt --memory --record-dc -n 1 >> memory-record-dc'
+	hyperfine 'racket bench.rkt --memory --bytes -n 10 >> memory-bytes' 'racket bench.rkt --memory --record-dc -n 10 >> memory-record-dc'
 
 $(COMPILED): bench.rkt
 	raco make bench.rkt
