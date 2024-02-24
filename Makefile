@@ -28,6 +28,10 @@ memory.svg: memory.csv memory-plot.rkt
 	rm -f $@
 	racket memory-plot.rkt
 
+memory2.svg: memory.csv memory-plot.rkt
+	rm -f $@
+	racket memory-plot2.rkt
+
 time.svg: time.csv time-plot.rkt
 	rm -f $@
 	racket time-plot.rkt
