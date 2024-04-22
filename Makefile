@@ -36,5 +36,13 @@ time.svg: time.csv time-plot.rkt
 	rm -f $@
 	racket time-plot.rkt
 
+time-dist-svgs: time.csv time-dist.rkt
+	rm -f {cpu,real,gc}-normal.svg
+	racket time-dist.rkt
+
+memory-normal.svg: memory.csv memory-dist.rkt
+	rm -f $@
+	racket memory-dist.rkt
+
 $(COMPILED): bench.rkt
 	raco make bench.rkt
