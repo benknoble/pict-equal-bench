@@ -85,8 +85,8 @@
                 (constructor pict->argb-pixels)
                 (comparator pequal-bytes?)]
    [("--record-dc") "Benchmark using record-dc%"
-                (constructor pict->recorded-datum)
-                (comparator pequal-dc?)]
+                    (constructor pict->recorded-datum)
+                    (comparator pequal-dc?)]
    #:once-any
    [("--time") "Benchmark timing"
                (bench run-time-bench)
