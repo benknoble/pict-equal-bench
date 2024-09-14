@@ -45,5 +45,6 @@
                    #:label (format "~a: N(~a,~a)" type μ σ)))
   #:x-min -1
   #:x-max 2
+  #:legend-anchor 'outside-top-left
   #:title (format "Normal distributions of memory (MiB)"))
  "memory-normal.svg")

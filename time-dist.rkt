@@ -52,5 +52,6 @@
     #:x-max (case class
               [("gc") 0.5]
               [else 10])
+    #:legend-anchor 'outside-top-left
     #:title (format "Normal distributions of time for ~a" class))
     (format "~a-normal.svg" class)))
