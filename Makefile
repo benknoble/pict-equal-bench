@@ -40,6 +40,10 @@ time-dist-svgs: time.csv time-dist.rkt
 	rm -f {cpu,real,gc}-normal.svg
 	racket time-dist.rkt
 
+time-interval-svgs: time.csv time-dist.rkt
+	rm -f {cpu,real,gc}-interval.svg
+	racket time-dist.rkt --intervals
+
 memory-normal.svg: memory.csv memory-dist.rkt
 	rm -f $@
 	racket memory-dist.rkt
