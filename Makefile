@@ -44,5 +44,9 @@ memory-normal.svg: memory.csv memory-dist.rkt
 	rm -f $@
 	racket memory-dist.rkt
 
+memory-interval.svg: memory.csv memory-dist.rkt
+	rm -f $@
+	racket memory-dist.rkt --intervals
+
 $(COMPILED): bench.rkt
 	raco make bench.rkt
